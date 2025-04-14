@@ -28,13 +28,13 @@ class CustomCard extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 80),  // المسافة للصورة
                     Text(
-                      product.title.length > 20
-                          ? '${product.title.substring(0, 20)}...'
+                      product.title.length > 6
+                          ? '${product.title.substring(0, 6)}...'
                           : product.title,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
