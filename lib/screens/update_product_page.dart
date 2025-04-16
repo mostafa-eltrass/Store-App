@@ -89,8 +89,9 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
 
   Future<void> updateProductData(ProductModel product) async {
     await UpdateProduct().updateProduct(
-      title: productName ?? product.title,
-      price: price ?? product.price.toString(),
+      id: product.id,
+      title: productName == null? product.title : productName !,
+      price: price == null ? product.price.toString() : price !,
       desc: desc ?? product.description,
       category: product.category,
       image: image ?? product.image,
